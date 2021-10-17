@@ -6,6 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>M.D'O.</title>
+    <style>      
+      div.exp:hover {
+        border: 1px solid black;
+      }
+      img.prj {
+        height:500px;
+        object-fit: cover;
+        object-position: 10% 100%;
+      }
+      .carousel-caption {
+        background: rgba(0, 0, 0, 0.5);
+      }
+      p.jst, h3.jst {
+      text-align: justify;
+      }
+
+      </style>
 </head>
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
@@ -33,8 +50,8 @@
             <p class="mt-1"><br></p>
             <p class="lead text-uppercase mb-1 mt-5">Hello!</p>
             <h1 class="intro-title marker">I’m Marco D'Oro</h1>
-          <h3 class="h5 my-2 mt-3 text-justify">I am a Business Developer, a Project Manger, a Digital Team Manager, a Coach, a Tech Recruiter and a Startupper but most of all I'm passionate about Web and Mobile Development</h3>
-          <p class="mt-4 text-justify">I am a quick learner and a team worker that gets the job done.
+          <h3 class="h5 my-2 mt-3 jst">I am a Business Developer, a Project Manger, a Digital Team Manager, a Coach, a Tech Recruiter and a Startupper but most of all I'm passionate about Web and Mobile Development</h3>
+          <p class="mt-4 jst">I am a quick learner and a team worker that gets the job done.
             My experiences are not only related to research and identify new business opportunities or defining business model, but are extended across different departments, including sales, marketing, project management, product management, and vendor management. Networking, negotiations, partnerships, and cost-savings efforts are also involved.
             Moreover Project Manager background has strengthened my critical thinking and problem-solving capabilities. I consolidated my aptitude to organize and pay attention to detail.
             </p>
@@ -47,46 +64,38 @@
   </div>
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
 <div id="Projects" class="carousel slide" data-bs-ride="carousel">
-
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#Projects" data-bs-slide-to="0" class="active"></button>
-      <button type="button" data-bs-target="#Projects" data-bs-slide-to="1"></button>
-      <button type="button" data-bs-target="#Projects" data-bs-slide-to="2"></button>
-      <button type="button" data-bs-target="#Projects" data-bs-slide-to="3"></button>
-      <button type="button" data-bs-target="#Projects" data-bs-slide-to="4"></button>
-    </div>
     
-    <div class="carousel-inner" style="height:500px">
+    <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="Digital Signage.JPG" alt="Digital Signage" class="d-block" style="width:100%">
+        <img src="Digital Signage.JPG" alt="Digital Signage" class="d-block prj" style="width:100%">
         <div class="carousel-caption">
           <h3>Fashion Store</h3>
           <p>In store Digital Signage solution!</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="VideoConference.jpg" alt="Video Conference" class="d-block" style="width:100%">
+        <img src="VideoConference.jpg" alt="Video Conference" class="d-block prj" style="width:100%">
         <div class="carousel-caption">
           <h3>Video Conference</h3>
           <p>Fully automated Video Conferencing Room!</p>
         </div> 
       </div>
       <div class="carousel-item">
-        <img src="T4G Platform.png" alt="T4G Platform" class="d-block" style="width:100%">
+        <img src="T4G Platform.png" alt="T4G Platform" class="d-block prj" style="width:100%">
         <div class="carousel-caption">
           <h3>Talent4GIG</h3>
           <p>AI based skills verification platform to hire Software Engineers</p>
         </div>  
       </div>
     <div class="carousel-item">
-      <img src="AlbaRoyalTruffle.png" alt="AlbaRoyalTruffle" class="d-block" style="width:100%">
+      <img src="AlbaRoyalTruffle.png" alt="AlbaRoyalTruffle" class="d-block prj" style="width:100%">
       <div class="carousel-caption">
         <h3>AlbaRoyalTruffle</h3>
         <p>Alba White Truffle e-Commerce</p>
       </div>  
     </div>
     <div class="carousel-item">
-      <img src="Amazon.png" alt="AlbaRoyalTruffle" class="d-block" style="width:100%">
+      <img src="Amazon.png" alt="AlbaRoyalTruffle" class="d-block prj" style="width:100%">
       <div class="carousel-caption">
         <h3>Amazon React Clone</h3>
         <p>UI/UX Clone using React and Firebase</p>
@@ -99,17 +108,24 @@
   <a class="carousel-control-next" type="button" data-bs-target="#Projects" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
   </a>
-</div>
 
+<div class="carousel-indicators">
+  <button type="button" data-bs-target="#Projects" data-bs-slide-to="0" class="active"></button>
+  <button type="button" data-bs-target="#Projects" data-bs-slide-to="1"></button>
+  <button type="button" data-bs-target="#Projects" data-bs-slide-to="2"></button>
+  <button type="button" data-bs-target="#Projects" data-bs-slide-to="3"></button>
+  <button type="button" data-bs-target="#Projects" data-bs-slide-to="4"></button>
+</div>
+    </div>
 
     <div class="container mt-3 shadow p-4 mb-4" id="Experience">
         <h2>My Experiences</h2>
         <p>See my previuos and actual work journey.</p>
         <div id="accordion">
           <div class="card">
-            <div class="card-header">
+            <div class="card-header exp">
               <a class="btn d-flex bd-highlight" data-bs-toggle="collapse" href="#collapseOne">
-                BUSINESS DEVELOPER @ Talent4GIG AG – Since January 2021 still in progress
+                <strong>DEVELOPER </strong> @ Talent4GIG AG – Since January 2021 still in progress
               </a>
             </div>
             <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
@@ -124,9 +140,10 @@
             </div>
           </div>
           <div class="card">
-            <div class="card-header">
+            <div class="card-header exp">
               <a class="collapsed btn d-flex bd-highlight" data-bs-toggle="collapse" href="#collapseTwo">
-                Web and Mobile Developer @ M.D'O. (Freelance) – Since March 2020 still in progress
+                <strong>WEB & MOBILE DEVELOPER </strong> @ M.D'O. (Freelance) 
+                – Since March 2020 still in progress
             </a>
             </div>
             <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
@@ -140,9 +157,9 @@
             </div>
           </div>
           <div class="card">
-            <div class="card-header">
+            <div class="card-header exp">
               <a class="collapsed btn d-flex bd-highlight" data-bs-toggle="collapse" href="#collapseThree">
-                PROJECT MANAGER, DIGITAL TEAM MANAGER @ Axians-Sirecom Srl – Since May 2018 to December 2021
+                <strong>PROJECT MANAGER, DIGITAL TEAM MANAGER </strong> @ Axians-Sirecom Srl – Since May 2018 to December 2021
               </a>
             </div>
             <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
@@ -158,9 +175,9 @@
           </div>
 
       <div class="card">
-        <div class="card-header">
+        <div class="card-header exp">
           <a class="collapsed btn d-flex bd-highlight" data-bs-toggle="collapse" href="#collapseFour">
-            IT CONSULTANT AND KEY ACCOUNT @ Albaufficio Srl – Since January 2012 to April 2018
+            <strong>CONSULTANT AND KEY ACCOUNT </strong> @ Albaufficio Srl – Since January 2012 to April 2018
           </a>
         </div>
         <div id="collapseFour" class="collapse" data-bs-parent="#accordion">
@@ -175,9 +192,9 @@
       </div>
 
   <div class="card">
-    <div class="card-header">
+    <div class="card-header exp">
       <a class="collapsed btn d-flex bd-highlight" data-bs-toggle="collapse" href="#collapseFive">
-        EMPLOYEE, COMPUTER SALES @ Dimo S.P.A. – Since December 2009 to December 2011
+        <strong>EMPLOYEE, COMPUTER SALES </strong> @ Dimo S.P.A. – Since December 2009 to December 2011
       </a>
     </div>
     <div id="collapseFive" class="collapse" data-bs-parent="#accordion">
@@ -328,11 +345,10 @@
             <div class="social-nav">
               <nav role="navigation">
                 <ul class="nav justify-content-center">
-                  <li class="nav-item"><a class="nav-link" href="https://twitter.com/" title="Twitter"><i class="fab fa-twitter"></i><span class="menu-title sr-only">Twitter</span></a></li>
-                  <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/" title="Facebook"><i class="fab fa-facebook"></i><span class="menu-title sr-only">Facebook</span></a></li>
-                  <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/" title="Instagram"><i class="fab fa-instagram"></i><span class="menu-title sr-only">Instagram</span></a></li>
-                  <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/" title="LinkedIn"><i class="fab fa-linkedin"></i><span class="menu-title sr-only">LinkedIn</span></a></li>
-                  <li class="nav-item"><a class="nav-link" href="https://www.behance.net/" title="Behance"><i class="fab fa-behance"></i><span class="menu-title sr-only">Behance</span></a></li>
+                  <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/marco-d-oro-60b00179//" title="LinkedIn"><span class="menu-title sr-only">LinkedIn</span></a></li>
+                  <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/dolcefareniente//" title="Instagram"><span class="menu-title sr-only">Instagram</span></a></li>
+                  <li class="nav-item"><a class="nav-link" href="https://www.twitter.com/DolceLive" title="Twitter"><span class="menu-title sr-only">Twitter</span></a></li>
+                  <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/doro.marco/" title="Facebook"><span class="menu-title sr-only">Facebook</span></a></li>
                 </ul>
               </nav>
             </div>
