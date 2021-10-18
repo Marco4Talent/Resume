@@ -22,6 +22,33 @@
       text-align: justify;
       }
 
+      div.scrl {
+        overflow: scroll; 
+      }
+
+      div.sml {
+        font-size: 13px;
+      }
+
+      @media all and (max-width: 500px) and (min-width: 400px) {
+        p.dev {
+          padding-left: 3px;
+          text-align: left;
+          }
+        }
+
+        @media all and (max-width: 1000px) and (min-width: 700px) {
+        p.dev {
+          text-align: left;
+          }
+        }
+
+        @media all and (max-width: 1000px) and (min-width: 700px) {
+        img.dev {
+          padding-top: 100px;          
+          }
+        }
+
       </style>
 </head>
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
@@ -37,7 +64,10 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
           <a class="nav-link" href="#Projects">Projects</a>
           <a class="nav-link" href="#Experience">Experience</a>
-          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#Skills">Skills</a>
+          <a class="nav-link" href="#Education">Education</a>
+          <a class="nav-link" href="#Competencies">Competencies</a>
+          <a class="nav-link" href="#Contacts">Contacts</a>
         </div>
       </div>
     </div>
@@ -58,7 +88,7 @@
           <div class="row mt-3">
           </div>
         </div>
-        <div class="col-md-5 offset-md-1 mt-5"><img class="avatar img-fluid" src="Profile photo.png" width="400" height="300" alt="Marco D'Oro"/></div>
+        <div class="col-md-5 offset-md-1 mt-5"><img class="avatar img-fluid dev" src="Profile photo.png" width="400" height="300" alt="Marco D'Oro"/></div>
       </div>
     </div>
   </div>
@@ -199,14 +229,17 @@
     </div>
     <div id="collapseFive" class="collapse" data-bs-parent="#accordion">
       <div class="card-body">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Activities performed:
+        <li>Identify customer needs and objectives.</li>
+        <li>Sales negotiation and closing.</li>
+        <li>Supplier management and coordination.</li>    
       </div>
     </div>
   </div>
 </div>
 </div>
 
-      <div class="section px-3 px-lg-4 pt-5" id="skills">
+      <div class="section px-3 px-lg-4 pt-5" id="Skills">
         <div class="container-narrow">
           <div class="text-center">
             <h2 class="marker marker-center">My Skills</h2>
@@ -269,9 +302,12 @@
                 </div>
               </div>
             </div>
-            <div class="row">
-              <p class="col-md-5 mt-3 mx-5 text-end"><strong>Italian</strong>: <i>Mother tongue</i> <br> <Strong>English</Strong>: <i>Written_Fluent / Spoken_Fluent</i> <br> <strong>German</strong>: <i>A1 Certificate</i></p>
-              <p class="col-md-5 mt-3 mx-4"><strong>Resilience</strong>: <i class="fas fa-border fa-circle"></i> <br> <strong>Commitment</strong>: <i>5</i> <br> <strong>Dynamic</strong>: <i>5</i> <br> <strong>Passionate</strong>: <i>5</i></p>
+            <div class="row dev">
+              <p class="col-md-5 mt-3 mx-4 dev"><strong>Italian</strong>: <i>Mother tongue</i> <br> <Strong>English</Strong>: <i>Written_Fluent / Spoken_Fluent</i> <br> <strong>German</strong>: <i>A1 Certificate</i></p>
+              <p class="col-md-5 mt-3 mx-4 dev"><strong>Resilience</strong>: <i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i> 
+                <br> <strong>Commitment</strong>: <i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i> 
+                <br> <strong>Dynamic</strong>: <i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i> 
+                <br> <strong>Passionate</strong>: <i class="fas fa-circle"><i class="fas fa-circle"></i><i class="fas fa-circle"></i></i></p>
             </div>
           </div>
         </div>
@@ -281,29 +317,29 @@
       <div class="col-md-6 container mt-3 shadow p-4 mb-4" id="Education">
         <h2 style="text-align:center;">My Achievement & Education</h2>
         <p style="text-align:center;">Master, Diploma and Courses.</p>
-        <div class="card-body">
-          <li>UDEMY, July 2021 - Flutter Development.</li>
-          <li>UDEMY, Januar 2021 - HTML & CSS.</li>
-          <li>24ORE BUSINESS SCHOOL, July 2019 - Master in Project Management.</li>
-          <li>SDA Bocconi, December 2017 – Master Samsung Top Dealer Digital.</li>
-          <li>UNIVERSITA' “Federico II”, Napoli – “Degree in Law” not achieved.</li>   
-          <li>IST. SCIENTIFICO AD INDIRIZZO INFORMATICO “A.Manzoni”, June 2004 - Diploma Scientifico</li> 
+        <div class="card-body sml">
+          <li><strong>UDEMY</strong>, July 2021 - Flutter Development.</li>
+          <li><strong>UDEMY</strong>, Januar 2021 - HTML & CSS.</li>
+          <li><strong>24ORE BUSINESS SCHOOL</strong>, July 2019 - Master in Project Management.</li>
+          <li><strong>SDA Bocconi</strong>, December 2017 – Master Samsung Top Dealer Digital.</li>
+          <li><strong>UNIVERSITA' “Federico II”</strong>, Napoli – “Degree in Law” not achieved.</li>   
+          <li><strong>IST. SCIENTIFICO IND. INFORMATICO “A.Manzoni”</strong>, June 2004 - Diploma Scientifico</li> 
         </div>
       </div>
-      <div class="col-md-6 container mt-3 shadow p-4 mb-4" id="Education">
-        <h2 style="text-align:center;">Tools and knowledge</h2>
-        <p style="text-align:center;">...</p>
-        <div class="card-body">
-          <li>Business Developer Tools: Pipedrive, Mailshake, ActiveCampaign, Apollo, ClicksUp, Linkedin.</li>
-          <li>Project Management Methodologies: Waterfall, Agile and PMP.</li>
-          <li>Project Management Tools: Atlassian Jira, Trello, Microsoft Project and comparable.</li>
-          <li>Languages & Frameworks: HTML, CSS, Bootstrap, JS, React, Liquid, Flutter.</li>
+      <div class="col-md-6 container mt-3 shadow p-4 mb-4" id="Competencies">
+        <h2 style="text-align:center;">Methodologies & Competences</h2>
+        <p style="text-align:center;">Tools and knowledge</p>
+        <div class="card-body sml">
+          <li><strong>Business Developer Tools</strong>: Pipedrive, Mailshake, ActiveCampaign, Apollo, ClicksUp, Linkedin.</li>
+          <li><strong>Project Management Methodologies</strong>: Waterfall, Agile and PMP.</li>
+          <li><strong>Project Management Tools</strong>: Atlassian Jira, Trello, Microsoft Project and comparable.</li>
+          <li><strong>Languages & Frameworks</strong>: HTML, CSS, Bootstrap, JS, React, Liquid, Flutter.</li>
         </div>
       </div>
     </div>
   </div>
       
-      <div class="offcanvas offcanvas-bottom" id="contact"  style="height:550px">
+      <div class="offcanvas offcanvas-bottom scrl" style="height:550px">
         <div class="section px-2 px-lg-4 pb-4 pt-5 mb-5" id="contact">
   <div class="container-narrow">
     <div class="text-center mb-5">
@@ -359,7 +395,7 @@
 </div>
 </div>
 
-      <footer class="pt-4 pb-4 text-center bg-light">
+      <footer class="pt-4 pb-4 text-center bg-light" id="Contacts">
         <div class="container">
           <div class="my-3">
             <div class="h3">Marco D'Oro...</div>
