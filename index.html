@@ -81,8 +81,7 @@
           <a class="nav-link" href="#Projects">Projects</a>
           <a class="nav-link" href="#Experience">Experience</a>
           <a class="nav-link" href="#Skills">Skills</a>
-          <a class="nav-link" href="#Education">Education</a>
-          <a class="nav-link" href="#Competencies">Competencies</a>
+          <a class="nav-link" href="#Interview">Interview</a>
           <a class="nav-link" href="#Downloads">Download CV</a>
           <a class="nav-link" href="#Contacts">Contacts</a>
 
@@ -115,11 +114,18 @@
     
     <div class="carousel-inner">
       <div class="carousel-item active">
+        <img src="USI.jpg" alt="Usi Startup Centre" class="d-block prj" style="width:100%">
+        <div class="carousel-caption">
+          <h3>USI Startup Centre</h3>
+          <p>"Elevator Pitch" Battle</p>
+        </div>
+      </div>
+      <div class="carousel-item">
         <img src="Digital Signage.JPG" alt="Digital Signage" class="d-block prj" style="width:100%">
         <div class="carousel-caption">
           <h3>Fashion Store</h3>
           <p>In store Digital Signage solution!</p>
-        </div>
+        </div> 
       </div>
       <div class="carousel-item">
         <img src="VideoConference.jpg" alt="Video Conference" class="d-block prj" style="width:100%">
@@ -163,6 +169,7 @@
   <button type="button" data-bs-target="#Projects" data-bs-slide-to="2"></button>
   <button type="button" data-bs-target="#Projects" data-bs-slide-to="3"></button>
   <button type="button" data-bs-target="#Projects" data-bs-slide-to="4"></button>
+  <button type="button" data-bs-target="#Projects" data-bs-slide-to="5"></button>
 </div>
     </div>
 
@@ -240,13 +247,13 @@
       </div>
 
   <div class="card">
-    <div class="card-header exp" data-bs-toggle="tooltip" title="Click to show more!">
-      <a class="collapsed btn d-flex bd-highlight" data-bs-toggle="collapse" href="#collapseFive" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to show more!">
+    <div class="card-header panel-heading exp" data-bs-toggle="tooltip" title="Click to show more!">
+      <a class="collapsed panel-title btn d-flex bd-highlight" data-bs-toggle="collapse" href="#collapseFive" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to show more!">
         <strong>EMPLOYEE, COMPUTER SALES </strong> @ Dimo S.P.A. – Since December 2009 to December 2011
       </a>
     </div>
     <div id="collapseFive" class="collapse" data-bs-parent="#accordion">
-      <div class="card-body">
+      <div class="card-body panel-body">
         Activities performed:
         <li>Identify customer needs and objectives.</li>
         <li>Sales negotiation and closing.</li>
@@ -413,6 +420,19 @@
 </div>
 </div>
 
+<div class="section px-3 px-lg-4" id="Interview">
+  <div class="container-narrow">
+    <div class="text-center">
+      <h2 class="marker marker-center">Interview</h2>
+    </div>
+    <div class="text-center">
+      <p class="mx-auto mb-3" style="max-width:600px">Listen my interview about Tech Recruiting and Skill Assessment</p>
+    </div>
+<iframe class="mb-3" src="https://open.spotify.com/embed/episode/0g1o0WgcOsqS7AuqK1BD0S" width="100%" height="232" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  </div>
+  </div>
+
+
 <footer class="pt-4 pb-4 text-center bg-light" id="Contacts">
   <div class="row">
     <div class="col-md-4 mt-1 pt-3"><img src="USI Startup Center.png" style="height: 120px" alt="USI"></div>
@@ -447,5 +467,14 @@
     return new bootstrap.Tooltip(tooltipTriggerEl)
   })
   </script>
+  <script>
+  $(".panel-heading").hover(
+    function() {
+       $('.panel-collapse').collapse('show');
+     }, function() {
+       $('.panel-collapse').collapse('hide');
+     }
+   );
+   </script>
 </html>
 
