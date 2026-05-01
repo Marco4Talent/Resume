@@ -1,752 +1,568 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <title>M.D'O.</title>
-   <!-- Hotjar Tracking Code for https://marco4talent.github.io/Resume -->
-<script>
-  (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:2661439,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
-
-   <style>      
-      div.exp:hover {
-        border: 1px solid black;
-      }
-      img.prj {
-        height:700px;
-        object-fit: cover;
-        object-position: 30% 70%;
-      }
-      .carousel-caption {
-        background: rgba(0, 0, 0, 0.5);
-      }
-      p.jst, h3.jst {
-      text-align: justify;
-      }
-
-      div.scrl {
-        overflow: scroll; 
-      }
-
-      div.sml {
-        font-size: 13px;
-      }
-
-      a.CV {
-        text-decoration: none;
-      }
-
-      @media all and (max-width: 500px) and (min-width: 400px) {
-        p.dev {
-          padding-left: 3px;
-          text-align: left;
-          }
-        }
-
-        @media all and (max-width: 1000px) and (min-width: 700px) {
-        p.dev {
-          text-align: left;
-          }
-        }
-
-        @media all and (max-width: 1000px) and (min-width: 700px) {
-        img.dev {
-          padding-top: 100px;          
-          }
-        }
-
-
-
-/* ================ The Timeline ================ */
-
-.timeline {
-  position: relative;
-  width: 1200px;
-  margin: 0 auto;
-  margin-top: 20px;
-  padding: 1em 0;
-  list-style-type: none;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marco D'Oro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=Space+Mono&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f4f2ed;
+  --black:#111;
+  --green:#00e676;
+  --green-dark:#00c853;
+  --muted:#888;
+  --border:#d9d7d2;
+  --display:'Bebas Neue',sans-serif;
+  --body:'Inter',sans-serif;
+  --mono:'Space Mono',monospace;
 }
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--bg);color:var(--black);font-family:var(--body);font-weight:300;line-height:1.6;overflow-x:hidden}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--black)}
 
-.timeline:before {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  content: ' ';
-  display: block;
-  width: 6px;
-  height: 100%;
-  margin-left: -3px;
-  background: rgb(80,80,80);
-  background: -moz-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));
-  background: -webkit-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
-  background: -o-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
-  background: -ms-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
-  background: linear-gradient(to bottom, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
-  
-  z-index: 5;
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1rem 2.5rem;
+  background:rgba(244,242,237,0.95);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--border);
 }
+.nav-logo{font-family:var(--display);font-size:1.6rem;letter-spacing:0.05em;color:var(--black);text-decoration:none;line-height:1}
+.nav-logo span{color:var(--green)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:0.72rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s}
+.nav-links a:hover{color:var(--black)}
+.nav-cta{font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;background:var(--black);color:var(--bg);padding:0.55rem 1.4rem;text-decoration:none;transition:background 0.2s,color 0.2s}
+.nav-cta:hover{background:var(--green);color:var(--black)}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none}
+.nav-toggle span{display:block;width:22px;height:1.5px;background:var(--black)}
 
-.timeline li {
-  padding: 1em 0;
+/* HERO */
+#hero{
+  min-height:100vh;
+  padding:8rem 2.5rem 4rem;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  position:relative;overflow:hidden;
+  border-bottom:1px solid var(--border);
 }
-
-.timeline li:after {
-  content: "";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
+.hero-bg-text{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-48%);
+  font-family:var(--display);font-size:clamp(120px,22vw,300px);
+  color:rgba(0,0,0,0.04);white-space:nowrap;
+  pointer-events:none;user-select:none;letter-spacing:-0.02em;line-height:1;
 }
+.hero-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:auto;padding-top:1rem}
+.hero-tag{font-family:var(--mono);font-size:0.7rem;color:var(--muted);border:1px solid var(--border);padding:0.4rem 0.8rem}
+.hero-location{font-family:var(--mono);font-size:0.7rem;color:var(--muted);display:flex;align-items:center;gap:0.5rem}
+.hero-location::before{content:'◎';color:var(--green);font-size:0.8rem}
+.hero-eyebrow{font-family:var(--mono);font-size:0.72rem;color:var(--green-dark);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:0.6rem}
+.hero-eyebrow::before{content:'';display:block;width:30px;height:1px;background:var(--green)}
+.hero-name{font-family:var(--display);font-size:clamp(5rem,16vw,18rem);line-height:0.88;letter-spacing:-0.01em;color:var(--black);margin-bottom:0.2rem}
+.hero-name .line2{display:block;-webkit-text-stroke:2px var(--black);color:transparent}
+.hero-bottom{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);align-items:end}
+.hero-desc{font-size:0.92rem;color:#555;line-height:1.7;max-width:340px}
+.hero-desc strong{color:var(--black);font-weight:500}
+.hero-stats-mini{display:flex;flex-direction:column;gap:1rem}
+.mini-stat{display:flex;align-items:baseline;gap:0.5rem}
+.mini-num{font-family:var(--display);font-size:2.5rem;color:var(--black);line-height:1}
+.mini-label{font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted)}
+.hero-scroll{display:flex;flex-direction:column;align-items:flex-end;gap:0.8rem;font-family:var(--mono);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)}
+.scroll-line{width:1px;height:60px;background:var(--black);align-self:flex-end;animation:scrollPulse 2s infinite}
+@keyframes scrollPulse{0%,100%{opacity:0.3}50%{opacity:1}}
 
-.direction-l {
-  position: relative;
-  width: 600px;
-  float: left;
-  text-align: right;
+/* MARQUEE */
+.marquee-wrap{overflow:hidden;border-bottom:1px solid var(--border);padding:1rem 0;background:var(--black)}
+.marquee-track{display:flex;white-space:nowrap;animation:marquee 20s linear infinite}
+.marquee-track span{font-family:var(--display);font-size:1.1rem;letter-spacing:0.15em;color:var(--bg);padding:0 2rem}
+.marquee-track span.accent{color:var(--green)}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* SECTIONS */
+.section{padding:6rem 2.5rem;border-bottom:1px solid var(--border)}
+.sec-header{display:flex;align-items:baseline;gap:1.5rem;margin-bottom:4rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+.sec-index{font-family:var(--mono);font-size:0.68rem;color:var(--green-dark);border:1px solid var(--green-dark);padding:0.2rem 0.5rem;flex-shrink:0}
+.sec-title{font-family:var(--display);font-size:clamp(3rem,7vw,7rem);letter-spacing:0.02em;line-height:0.9;color:var(--black)}
+.sec-title.outline{-webkit-text-stroke:1.5px var(--black);color:transparent}
+
+/* ABOUT */
+#about{background:var(--bg)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.about-photo-wrap{position:relative}
+.about-photo{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center top;display:block;filter:contrast(1.05)}
+.about-photo-label{position:absolute;bottom:1.5rem;left:1.5rem;background:var(--green);color:var(--black);font-family:var(--mono);font-size:0.68rem;letter-spacing:0.1em;padding:0.4rem 0.8rem;font-weight:600}
+.about-text{padding-top:1rem}
+.about-big{font-family:var(--display);font-size:clamp(2rem,4vw,4rem);line-height:1.05;letter-spacing:0.03em;color:var(--black);margin-bottom:2rem}
+.about-big em{font-style:normal;color:var(--green-dark)}
+.about-body{font-size:0.93rem;color:#555;line-height:1.85;margin-bottom:1.2rem}
+.about-tags{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.5rem}
+.tag{font-family:var(--mono);font-size:0.68rem;letter-spacing:0.08em;border:1px solid var(--border);padding:0.4rem 0.9rem;color:var(--muted);transition:all 0.2s;cursor:default}
+.tag:hover{border-color:var(--black);color:var(--black)}
+
+/* EXPERIENCE */
+#experience{background:#fff}
+.exp-row{display:grid;grid-template-columns:180px 1fr auto;gap:2rem;align-items:start;padding:2.5rem 0;border-bottom:1px solid var(--border);transition:padding 0.2s,background 0.2s}
+.exp-row:hover{background:rgba(0,230,118,0.04);margin:0 -2.5rem;padding-left:2.5rem;padding-right:2.5rem}
+.exp-period{font-family:var(--mono);font-size:0.7rem;color:var(--muted);letter-spacing:0.05em;padding-top:0.3rem}
+.exp-period strong{display:block;color:var(--black);font-size:0.8rem;margin-bottom:0.2rem}
+.exp-role{font-family:var(--display);font-size:clamp(1.6rem,3vw,2.8rem);letter-spacing:0.03em;line-height:1;color:var(--black);margin-bottom:0.4rem}
+.exp-company{font-size:0.78rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--green-dark);margin-bottom:0.8rem;display:flex;align-items:center;gap:0.5rem}
+.exp-company::before{content:'';display:block;width:20px;height:1px;background:var(--green)}
+.exp-bullets{font-size:0.85rem;color:#666;line-height:1.8;list-style:none}
+.exp-bullets li{position:relative;padding-left:1.2rem}
+.exp-bullets li::before{content:'→';position:absolute;left:0;color:var(--green-dark);font-size:0.75rem}
+.exp-badge{font-family:var(--mono);font-size:0.62rem;letter-spacing:0.08em;border:1px solid var(--border);padding:0.3rem 0.6rem;color:var(--muted);height:fit-content;white-space:nowrap}
+
+/* SKILLS */
+#skills{background:var(--black);color:var(--bg)}
+#skills .sec-title{color:var(--bg)}
+#skills .sec-header{border-bottom-color:rgba(255,255,255,0.1)}
+#skills .sec-index{color:var(--green);border-color:var(--green)}
+.skills-two{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid rgba(255,255,255,0.1)}
+.skills-col{padding:3rem;border-right:1px solid rgba(255,255,255,0.1)}
+.skills-col:last-child{border-right:none}
+.skills-col-title{font-family:var(--mono);font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--green);margin-bottom:2rem}
+.sk-item{margin-bottom:1.8rem}
+.sk-top{display:flex;justify-content:space-between;margin-bottom:0.5rem}
+.sk-name{font-size:0.85rem;font-weight:400;color:rgba(244,242,237,0.8)}
+.sk-pct{font-family:var(--mono);font-size:0.75rem;color:var(--green)}
+.sk-bar{height:2px;background:rgba(255,255,255,0.08);position:relative;overflow:hidden}
+.sk-fill{height:100%;background:var(--green);transform:scaleX(0);transform-origin:left;transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.sk-fill.visible{transform:scaleX(1)}
+.lang-strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,0.1)}
+.lang-item{padding:2.5rem;border-right:1px solid rgba(255,255,255,0.1)}
+.lang-item:last-child{border-right:none}
+.lang-name{font-family:var(--display);font-size:2.5rem;letter-spacing:0.05em;color:var(--bg);line-height:1;margin-bottom:0.4rem}
+.lang-level{font-family:var(--mono);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)}
+
+/* EDUCATION + TOOLS */
+#education{background:var(--bg)}
+.two-col-section{display:grid;grid-template-columns:1fr 1fr;gap:4rem}
+.edu-item{display:flex;gap:1.5rem;padding:1.5rem 0;border-bottom:1px solid var(--border);align-items:baseline}
+.edu-year{font-family:var(--mono);font-size:0.68rem;color:var(--green-dark);width:48px;flex-shrink:0}
+.edu-inst{font-weight:600;font-size:0.88rem;margin-bottom:0.15rem}
+.edu-deg{font-size:0.8rem;color:var(--muted)}
+.tools-block{margin-bottom:2.5rem}
+.tools-block-title{font-family:var(--mono);font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--green-dark);margin-bottom:0.8rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+.pills{display:flex;flex-wrap:wrap;gap:0.4rem}
+.pill{font-size:0.75rem;padding:0.3rem 0.75rem;background:#fff;border:1px solid var(--border);color:#555;transition:all 0.2s;cursor:default}
+.pill:hover{background:var(--black);color:var(--bg);border-color:var(--black)}
+
+/* PROJECTS */
+#projects{background:#fff}
+.projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border)}
+.proj-card{background:#fff;padding:3rem;transition:background 0.25s;position:relative;overflow:hidden}
+.proj-card:hover{background:#fafaf8}
+.proj-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--green);transform:scaleX(0);transform-origin:left;transition:transform 0.3s}
+.proj-card:hover::after{transform:scaleX(1)}
+.proj-num{font-family:var(--mono);font-size:0.65rem;color:var(--muted);margin-bottom:2rem}
+.proj-title{font-family:var(--display);font-size:3rem;letter-spacing:0.03em;line-height:0.95;color:var(--black);margin-bottom:1rem}
+.proj-desc{font-size:0.85rem;color:#777;line-height:1.8;margin-bottom:1.5rem}
+.proj-link{font-family:var(--mono);font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--black);text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;border-bottom:1px solid var(--black);padding-bottom:2px;transition:color 0.2s,border-color 0.2s}
+.proj-link:hover{color:var(--green-dark);border-color:var(--green-dark)}
+.proj-link::after{content:'↗';font-size:0.9em}
+
+/* INTERVIEWS */
+#interviews{background:var(--bg)}
+.interview-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.interview-card{border:1px solid var(--border);background:#fff;overflow:hidden}
+.interview-head{padding:1.2rem 1.5rem;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.interview-label{font-family:var(--mono);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted)}
+.interview-dot{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+.interview-desc{padding:1rem 1.5rem;font-size:0.82rem;color:#777;line-height:1.7}
+.interview-card iframe{display:block;width:100%}
+
+/* READING */
+#reading{background:var(--black);color:var(--bg)}
+#reading .sec-title{color:var(--bg)}
+#reading .sec-title.outline{-webkit-text-stroke-color:rgba(244,242,237,0.25)}
+#reading .sec-header{border-bottom-color:rgba(255,255,255,0.1)}
+#reading .sec-index{color:var(--green);border-color:var(--green)}
+.books-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid rgba(255,255,255,0.1)}
+.book-card{padding:3rem;border-right:1px solid rgba(255,255,255,0.1)}
+.book-card:last-child{border-right:none}
+.book-tag{font-family:var(--mono);font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--green);margin-bottom:1rem}
+.book-title{font-family:var(--display);font-size:2.2rem;letter-spacing:0.03em;line-height:1.1;color:var(--bg);margin-bottom:1rem}
+.book-body{font-size:0.83rem;color:rgba(244,242,237,0.5);line-height:1.85}
+
+/* FOOTER */
+footer{background:var(--black);padding:5rem 2.5rem 3rem;border-top:1px solid rgba(255,255,255,0.1)}
+.footer-big{font-family:var(--display);font-size:clamp(4rem,12vw,12rem);letter-spacing:0.02em;line-height:0.85;color:var(--bg);margin-bottom:4rem}
+.footer-big span{color:var(--green)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:flex-end;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.1);flex-wrap:wrap;gap:1.5rem}
+.footer-sub{font-family:var(--mono);font-size:0.68rem;color:rgba(244,242,237,0.4);letter-spacing:0.1em;text-transform:uppercase}
+.footer-cv{font-family:var(--mono);font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;background:var(--green);color:var(--black);padding:0.7rem 1.8rem;text-decoration:none;transition:background 0.2s;display:inline-block}
+.footer-cv:hover{background:var(--green-dark)}
+.footer-copy{font-family:var(--mono);font-size:0.6rem;color:rgba(244,242,237,0.2);letter-spacing:0.08em;margin-top:2rem}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  nav{padding:1rem 1.5rem}
+  .nav-links{display:none;flex-direction:column;gap:0;position:absolute;top:100%;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--border);padding:1rem 0}
+  .nav-links.open{display:flex}
+  .nav-links li a{display:block;padding:0.7rem 1.5rem}
+  .nav-toggle{display:flex}
+  .nav-cta{display:none}
+  #hero{padding:7rem 1.5rem 3rem}
+  .hero-bottom{grid-template-columns:1fr;gap:1.5rem}
+  .hero-name{font-size:clamp(4rem,18vw,8rem)}
+  .hero-bg-text{display:none}
+  .section{padding:4rem 1.5rem}
+  .about-grid{grid-template-columns:1fr;gap:2.5rem}
+  .about-photo{aspect-ratio:4/3;max-height:360px}
+  .exp-row{grid-template-columns:1fr;gap:0.5rem}
+  .exp-row:hover{margin:0;padding-left:0;padding-right:0}
+  .exp-badge{display:none}
+  .skills-two{grid-template-columns:1fr}
+  .skills-col{border-right:none;border-bottom:1px solid rgba(255,255,255,0.1);padding:2rem 1.5rem}
+  .lang-strip{grid-template-columns:1fr}
+  .lang-item{border-right:none;border-bottom:1px solid rgba(255,255,255,0.1);padding:1.5rem}
+  .two-col-section{grid-template-columns:1fr;gap:3rem}
+  .projects-grid{grid-template-columns:1fr}
+  .interview-grid{grid-template-columns:1fr}
+  .books-grid{grid-template-columns:1fr}
+  .book-card{border-right:none;border-bottom:1px solid rgba(255,255,255,0.1);padding:2rem 1.5rem}
+  .footer-big{font-size:clamp(3rem,16vw,8rem)}
+  footer{padding:3rem 1.5rem 2rem}
 }
-
-.direction-r {
-  position: relative;
-  width: 600px;
-  float: right;
-}
-
-.flag-wrapper {
-  position: relative;
-  display: inline-block;
-  
-  text-align: center;
-}
-
-.flag {
-  position: relative;
-  display: inline;
-  background: rgb(248,248,248);
-  padding: 6px 10px;
-  border-radius: 5px;
-  text-align: left;
-}
-
-.direction-l .flag {
-  -webkit-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-  -moz-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-  box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-}
-
-.direction-r .flag {
-  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-  -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-  box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-}
-
-.direction-l .flag:before,
-.direction-r .flag:before {
-  position: absolute;
-  top: 50%;
-  right: -7px;
-  content: ' ';
-  display: block;
-  width: 12px;
-  height: 12px;
-  margin-top: -10px;
-  background: #fff;
-  border-radius: 10px;
-  border: 4px solid rgb(255,80,80);
-  z-index: 10;
-}
-
-.direction-r .flag:before {
-  left: -7px;
-}
-
-.direction-l .flag:after {
-  content: "";
-  position: absolute;
-  left: 100%;
-  top: 50%;
-  height: 0;
-  width: 0;
-  margin-top: -8px;
-  border: solid transparent;
-  border-left-color: rgb(248,248,248);
-  border-width: 8px;
-  pointer-events: none;
-}
-
-.direction-r .flag:after {
-  content: "";
-  position: absolute;
-  right: 100%;
-  top: 50%;
-  height: 0;
-  width: 0;
-  margin-top: -8px;
-  border: solid transparent;
-  border-right-color: rgb(248,248,248);
-  border-width: 8px;
-  pointer-events: none;
-}
-
-.time-wrapper {
-  display: inline;
-  
-  line-height: 1em;
-  font-size: 0.66666em;
-  color: rgb(250,80,80);
-  vertical-align: middle;
-}
-
-.direction-l .time-wrapper {
-  float: left;
-}
-
-.direction-r .time-wrapper {
-  float: right;
-}
-
-.time {
-  display: inline-block;
-  padding: 4px 6px;
-  background: rgb(248,248,248);
-}
-
-.desc {
-  margin: 1em 0.75em 0 0;
-  
-  font-size: 0.77777em;
-  font-style: italic;
-  line-height: 1.5em;
-}
-
-.direction-r .desc {
-  margin: 1em 0 0 0.75em;
-}
-
-/* ================ Timeline Media Queries ================ */
-
-@media screen and (max-width: 660px) {
-
-.timeline {
- 	width: 100%;
-	padding: 4em 0 1em 0;
-}
-
-.timeline li {
-	padding: 2em 0;
-}
-
-.direction-l,
-.direction-r {
-	float: none;
-	width: 100%;
-
-	text-align: center;
-}
-
-.flag-wrapper {
-	text-align: center;
-}
-
-.flag {
-	background: rgb(255,255,255);
-	z-index: 15;
-}
-
-.direction-l .flag:before,
-.direction-r .flag:before {
-  position: absolute;
-  top: -30px;
-	left: 50%;
-	content: ' ';
-	display: block;
-	width: 12px;
-	height: 12px;
-	margin-left: -9px;
-	background: #fff;
-	border-radius: 10px;
-	border: 4px solid rgb(255,80,80);
-	z-index: 10;
-}
-
-.direction-l .flag:after,
-.direction-r .flag:after {
-	content: "";
-	position: absolute;
-	left: 50%;
-	top: -8px;
-	height: 0;
-	width: 0;
-	margin-left: -8px;
-	border: solid transparent;
-	border-bottom-color: rgb(255,255,255);
-	border-width: 8px;
-	pointer-events: none;
-}
-
-.time-wrapper {
-	display: block;
-	position: relative;
-	margin: 4px 0 0 0;
-	z-index: 14;
-}
-
-.direction-l .time-wrapper {
-	float: none;
-}
-
-.direction-r .time-wrapper {
-	float: none;
-}
-
-.desc {
-	position: relative;
-	margin: 1em 0 0 0;
-	padding: 1em;
-	background: rgb(245,245,245);
-	-webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
-	-moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
-	box-shadow: 0 0 1px rgba(0,0,0,0.20);
-	
-  z-index: 15;
-}
-
-.direction-l .desc,
-.direction-r .desc {
-	position: relative;
-	margin: 1em 1em 0 1em;
-	padding: 1em;
-	
-  z-index: 15;
-}
-
-}
-
-  @media screen and (min-width: 400px) and (max-width: 660px) {
-
-.direction-l .desc,
-.direction-r .desc {
-	margin: 1em 4em 0 4em;
-}
-
-}
-
-
-      </style>
+</style>
 </head>
-<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img src="Nana Korobi Ya Oki.jpg" alt="Logo" style="width:30px;" class="rounded-pill">
-          </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-          <a class="nav-link" href="#Projects">Projects</a>
-          <a class="nav-link" href="#Experience">Experience</a>
-          <a class="nav-link" href="#Skills">Skills</a>
-          <a class="nav-link" href="#Interview">Interview</a>
-          <a class="nav-link" href="#Reading Suggestions">Reading Suggestions</a>
-          <a class="nav-link" href="#Downloads">Download CV</a>
-          <a class="nav-link" href="#Contacts">Contacts</a>
+<body>
 
-        </div>
-      </div>
-    </div>
-  </nav>
-  
-<div class="section pl-5 pt-4 px-3 px-lg-4" id="about">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-            <p class="mt-1"><br></p>
-            <p class="lead text-uppercase mb-1 mt-5">Hello!</p>
-            <h1 class="intro-title marker">I’m Marco D'Oro</h1>
-          <h3 class="h5 my-2 mt-3 jst">a dynamic professional well-versed in business development, project management, team leadership, coaching, talent spotting, and entrepreneurship. Committed to developing, promoting, and fostering a Corporate culture that will drive value for all stakeholders, I rely on my high level of emotional intelligence to create the vibe.</h3>
-          <p class="mt-4 jst">Quick in getting the ropes, I am known for being driven by my hands-on approach. I like to think that my highly cooperative management style will deliver the most ambitious targets. My expertise encompasses research, business opportunity identification, and business model development, coupled with extensive experience in sales, marketing, project and product management, as well as vendor relations. Proficient in networking, negotiation, partnership establishment, and cost-saving implementations, I consistently deliver results.
-            <p>Moreover, my background as a Project Manager has sharpened my critical thinking and problem-solving abilities. With a keen eye for detail and impeccable organizational skills, I oversee projects with thoroughness and precision, leaving no aspect overlooked.
-            </p>
-          </p>
-          <div class="row mt-3">
-          </div>
-        </div>
-        <div class="col-md-5 offset-md-1 mt-5"><img class="avatar img-fluid dev" src="Profile photo.png" width="400" height="300" alt="Marco D'Oro"/></div>
-      </div>
-    </div>
+<nav>
+  <a class="nav-logo" href="#">M.D<span>'</span>ORO</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#interviews">Media</a></li>
+    <li><a href="#reading">Reading</a></li>
+  </ul>
+  <a href="https://bit.ly/494cttb" class="nav-cta" target="_blank">Download CV</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<section id="hero" style="border-bottom:1px solid var(--border)">
+  <div class="hero-bg-text">MARCO</div>
+  <div class="hero-top">
+    <div class="hero-tag">// Sales Director · PM · Entrepreneur</div>
+    <div class="hero-location">Lugano, Switzerland</div>
   </div>
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
-
-  <div class="section px-3 px-lg-4" id="Interview">
-    <div class="container-narrow">
-      <div class="text-center">
-        <h2 class="marker marker-center mt-3">My Interviews</h2>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <p class="mx-auto mb-3" style="max-width:600px">Listen to my interview about Tech Recruiting and Skill Assessment</p>
-          <iframe class="mt-4" src="https://open.spotify.com/embed/episode/0g1o0WgcOsqS7AuqK1BD0S" width="100%" height="400" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-        </div>
-        <div class="col-md-6" style="height: 410px; border-radius: 10px; overflow: hidden;">
-          <p class="mx-auto mb-3" style="max-width:600px">Listen to my interview about how crucial is Data Accuracy in AML Compliance</p>
-          <iframe class="mt-4" width="100%" height="83%"  style="height: 350px; border-radius: 10px; overflow: hidden;" src="https://www.youtube.com/embed/Pp0faMF-6_U?si=GrOZkgFm4PzK5JyF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
-      </div>
-    </div>
+  <div style="margin-top:auto">
+    <h1 class="hero-name">MARCO<span class="line2">D'ORO</span></h1>
   </div>
-
-  <div id="Projects" class="carousel slide" data-bs-ride="carousel">
-  <div class="section px-3 px-lg-4 m-4" id="Reading Suggestions">
-    <div class="row mb-3">
-  
-      <div class="col-md-7 shadow mb-3">
-      <div class="container-narrow">
-        <div class="text-center">
-          <h2 class="marker marker-center mt-3 mb-3">My Reading Suggestions</h2>
-        </div>
-        <div class="mx-3">
-          <div class="px-3 mb-3">
-            <div class="row">
-              <iframe class="col-md-5" type="text/html" sandbox="allow-scripts allow-same-origin allow-popups" width="200" height="350" frameborder="0" allowfullscreen style="max-width:100%" src="https://lesen.amazon.de/kp/card?asin=B0CLKYK6H1&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_6APV4SV9QDGWPGV5XEY5&tag=dolcefareni07-21" ></iframe>
-            <p class="mx-auto mb-3 col-md-7 mt-3 jst" style="max-width:600px">Explore 'Le nuove regole antiriciclaggio 2023', which delves into the obligations professionals must meet. This comprehensive guide addresses the evolving landscape of organizational policies and ongoing staff training. Suitable for professionals in banking, legal, insurance, and non-financial sectors.</p>
-          </div>
-          </div>
-          <hr class="m-4 px-3"> 
-          <div class="px-3 mb-3">
-            <div class="row">
-              <iframe class="col-md-5" type="text/html" sandbox="allow-scripts allow-same-origin allow-popups" width="200" height="350" frameborder="0" allowfullscreen style="max-width:100%" src="https://lesen.amazon.de/kp/card?asin=B0B6NQYBY9&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_0SKXQ4RPACBNCXEAX5BM&tag=dolcefareni07-21" ></iframe>          
-              <p class="mx-auto mb-3 col-md-7 mt-3 jst" style="max-width:600px">Discover 'Deconstructing Money Laundering Risk', a compelling exploration of the risk-based approach (RBA) within the banking industry. This insightful book uncovers how differing interpretations of risk can inadvertently impact the management of money laundering risk. Offering a practical framework for risk practitioners, it sheds light on the complexities of ML risk communication, addressing the misalignments among stakeholders. A must-read for researchers and professionals in financial institutions, intelligence units, and regulatory bodies combating money laundering.</p>
-
-            </div>
-            </div>
-        </div>
-      </div>
+  <div class="hero-bottom">
+    <p class="hero-desc"><strong>Dynamic professional</strong> well-versed in business development, project management, team leadership, and entrepreneurship. Committed to fostering corporate culture that drives value for all stakeholders.</p>
+    <div class="hero-stats-mini">
+      <div class="mini-stat"><span class="mini-num">15+</span><span class="mini-label">Anni di esperienza</span></div>
+      <div class="mini-stat"><span class="mini-num">+30%</span><span class="mini-label">Pipeline cresciuta</span></div>
+      <div class="mini-stat"><span class="mini-num">+20%</span><span class="mini-label">Revenue increase</span></div>
     </div>
-
-    <div class="col-md-5">
-    <div class="container-narrow">
-      <div class="text-center">
-        <h2 class="marker marker-center mt-3 mb-3">My Ongoing Projects</h2>
-      </div>
-      <div class="ms-3">
-        <div class="px-3">
-          <div class="row">
-          <p class="mx-auto mb-3 mx-3 text-center" style="max-width:600px">Music production, distributed by Routenote & Distrokid</p>
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/4EIz3VfKYw6YFufyzV0mE2?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>        
-        </div>
-        </div>
-        <hr class="m-4 px-3"> 
-        <div class="mx-3">
-          <div class="row mt-3">
-            <style>
-                .libutton-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Altezza del contenitore al 100% della viewport */
-  }
-              .libutton {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                padding: 7px;
-                text-align: center;
-                outline: none;
-                text-decoration: none !important;
-                color: #ffffff !important;
-                width: 200px;
-                height: 32px;
-                border-radius: 16px;
-                background-color: #0A66C2;
-                font-family: "SF Pro Text", Helvetica, sans-serif;
-              }
-            </style>
-                <p class="mx-auto mt-3 mb-1 text-center" style="max-width:600px">AML News, the Anti-Money Laundering newsletter</p>
-                <img src="AML Newsletter.png" alt="Logo" style="width:auto;">
-                <div class="text-center">
-                <a class="libutton mt-3 mx-3" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7056183658365227008" target="_blank">Join on LinkedIn</a>            
-                </div>
-              </div>
-      </div>
-    </div>
+    <div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div>
   </div>
-</div>
-</div>
-</div>
+</section>
 
-<div class="container mt-3 shadow p-4 mb-4" id="Experience">
-  <h2 style="text-align:center;">My Experiences</h2>
-  <p style="text-align:center;">See my previous and actual work journey</p>
-
-<!-- The Timeline -->
-
-<ul class="timeline">
-
-	<!-- Item 1 -->
-	<li>
-		<div class="direction-r">
-			<div class="flag-wrapper">
-				<span class="flag"><strong>BUSINESS DEVELOPMENT MANAGER </strong> @ SGR Compliance SA</span>
-				<span class="time-wrapper"><span class="time">April 2022 - present</span></span>
-			</div>
-			<div class="desc">      
-          <strong>Main Achievements:</strong>
-        <br>Increased sales pipeline by 30% through effective lead generation and nurturing more opportunities.
-        <br>Strategic alliances with industry leaders, resulting in a 20% increase in partnership agreements.
-        <br>Achieved a 20% sales revenue increase via targeted strategies and expanding the customer base.
-        <br>Led market expansion into new regions, enhancing market penetration and brand awareness.
-        <br>Drove product enhancements and improvements through proactive suggestions.
-    </div>
-		</div>
-	</li>
-  
-	<!-- Item 2 -->
-	<li>
-		<div class="direction-l">
-			<div class="flag-wrapper">
-				<span class="flag"><strong>BUSINESS DEVELOPMENT MANAGER </strong> @ Talent4GIG AG</span>
-				<span class="time-wrapper"><span class="time">January 2021 to March 2022</span></span>
-			</div>
-			<div class="desc">        
-          <strong>Activities performed:</strong>
-          <br>Refined the Company's Business Model for improved market positioning.
-          <br>Implemented strategies to generate leads and initiate client engagement.
-          <br>Cultivated strong client relationships through personalized interactions.
-          <br>Negotiated contract terms with clients and maintained stakeholder communication.
-          <br>Ensured seamless contract execution and project management.
-    </div>
-		</div>
-	</li>
-
-	<!-- Item 3 -->
-	<li>
-		<div class="direction-r">
-			<div class="flag-wrapper">
-				<span class="flag"><strong>WEB & MOBILE DEVELOPER </strong> @ M.D'O. (Freelance)</span>
-				<span class="time-wrapper"><span class="time">March 2020 - present</span></span>
-			</div>
-			<div class="desc">      
-          <strong>Activities performed:</strong>
-        <br>HTML & CSS deep knowledge.
-        <br>React basic knowledge.
-        <br>Flutter development.
-        <br>e-Commerce development.
-    </div>
-		</div>
-	</li>
-  
-	<!-- Item 4 -->
-	<li>
-		<div class="direction-l">
-			<div class="flag-wrapper">
-				<span class="flag"><strong>DIGITAL PROJECT MANAGER </strong> @ Axians-Sirecom Srl</span>
-				<span class="time-wrapper"><span class="time">May 2018 to December 2020</span></span>
-			</div>
-			<div class="desc">        
-          <strong>Activities performed:</strong>
-          <br>Coordinate internal resources and third parties/vendors for the flawless execution of projects.
-          <br>Ensure that all projects are delivered on-time, within scope and within budget.
-          <br>Measure project performance using appropriate systems, tools and techniques.
-          <br>Monitor the overall work progress and take suitable measures to prevent delays.
-          <br>Identify and resolve issues and conflicts within the project team.
-    </div>
-		</div>
-	</li>
-
-	<!-- Item 5 -->
-	<li>
-		<div class="direction-r">
-			<div class="flag-wrapper">
-				<span class="flag"><strong>CONSULTANT AND KEY ACCOUNT </strong> @ Albaufficio Srl</span>
-				<span class="time-wrapper"><span class="time">January 2012 to April 2018</span></span>
-			</div>
-			<div class="desc">      
-          <strong>Activities performed:</strong>
-        <br>Identify customer needs and objectives.
-        <br>Project monitoring and progress Meeting organization.
-        <br>Sales negotiation and closing of the contract.
-        <br>Supplier management and coordination.
-    </div>
-		</div>
-	</li>
-  
-	<!-- Item 6 -->
-	<li>
-		<div class="direction-l">
-			<div class="flag-wrapper">
-				<span class="flag"><strong>EMPLOYEE, COMPUTER SALES </strong> @ Dimo S.P.A.</span>
-				<span class="time-wrapper"><span class="time">December 2009 to December 2011</span></span>
-			</div>
-			<div class="desc">        
-          <strong>Activities performed:</strong>
-          <br>Identify customer needs and objectives.
-          <br>Sales negotiation and closing.
-          <br>Supplier management and coordination.
-    </div>
-		</div>
-	</li>
-</ul>
-
-</div>
-
-<div class="section px-3 px-lg-4 pt-3" id="Skills">
-  <div class="container-narrow">
-    <div class="text-center">
-      <h2 class="marker marker-center">My Skills</h2>
-    </div>
-    <div class="text-center">
-      <p class="mx-auto mb-3" style="max-width:600px">I possess a robust capacity for adaptation and excel in swiftly acquiring new skills</p>
-    </div>
-    <div class="bg-light p-3 ms-3">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="py-1">
-            <div class="d-flex text-small fw-bolder"><span class="me-auto">Project Management</span><span>90%</span></div>
-            <div class="progress my-1">
-              <div class="progress-bar bg-success" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-          <div class="py-1">
-            <div class="d-flex text-small fw-bolder"><span class="me-auto">Team Leadership and Development</span><span>95%</span></div>
-            <div class="progress my-1">
-              <div class="progress-bar bg-success" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-          <div class="py-1">
-            <div class="d-flex text-small fw-bolder"><span class="me-auto">Business Development</span><span>97%</span></div>
-            <div class="progress my-1">
-              <div class="progress-bar bg-success" role="progressbar" style="width: 97%" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-          <div class="py-1">
-            <div class="d-flex text-small fw-bolder"><span class="me-auto">Sales Process Optimization</span><span>90%</span></div>
-            <div class="progress my-1">
-              <div class="progress-bar bg-secondary" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="py-1">
-            <div class="d-flex text-small fw-bolder"><span class="me-auto">Leadership</span><span>85%</span></div>
-            <div class="progress my-1">
-              <div class="progress-bar bg-primary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-          <div class="py-1">
-            <div class="d-flex text-small fw-bolder"><span class="me-auto">Adaptability</span><span>95%</span></div>
-            <div class="progress my-1">
-              <div class="progress-bar bg-primary" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-          <div class="py-1">
-            <div class="d-flex text-small fw-bolder"><span class="me-auto">Communication Skills</span><span>90%</span></div>
-            <div class="progress my-1">
-              <div class="progress-bar bg-primary" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-          <div class="py-1">
-            <div class="d-flex text-small fw-bolder"><span class="me-auto">Operations Management and Optimization</span><span>85%</span></div>
-            <div class="progress my-1">
-              <div class="progress-bar bg-secondary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row dev">
-        <p class="col-md-5 mt-3 mx-4 dev"><strong>Italian</strong>: <i>Mother tongue</i> 
-          <br> <Strong>English</Strong>: <i>Written_Fluent / Spoken_Fluent</i> 
-          <br> <strong>German</strong>: <i>A1 Certificate</i></p>
-        <p class="col-md-5 mt-3 mx-4 dev"><strong>Resilience</strong>: <i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i> 
-          <br> <strong>Commitment</strong>: <i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i> 
-          <br> <strong>Dynamic</strong>: <i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i></i></p>
-      </div>
-    </div>
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>Business Development</span><span class="accent">✦</span>
+    <span>Project Management</span><span class="accent">✦</span>
+    <span>Team Leadership</span><span class="accent">✦</span>
+    <span>AML Compliance</span><span class="accent">✦</span>
+    <span>Sales Strategy</span><span class="accent">✦</span>
+    <span>Entrepreneurship</span><span class="accent">✦</span>
+    <span>Web Development</span><span class="accent">✦</span>
+    <span>Music Production</span><span class="accent">✦</span>
+    <span>Business Development</span><span class="accent">✦</span>
+    <span>Project Management</span><span class="accent">✦</span>
+    <span>Team Leadership</span><span class="accent">✦</span>
+    <span>AML Compliance</span><span class="accent">✦</span>
+    <span>Sales Strategy</span><span class="accent">✦</span>
+    <span>Entrepreneurship</span><span class="accent">✦</span>
+    <span>Web Development</span><span class="accent">✦</span>
+    <span>Music Production</span><span class="accent">✦</span>
   </div>
 </div>
 
-<div class="row">
-<div class="col-md-6 container mt-3 shadow p-4 mb-4" id="Education">
-  <h2 style="text-align:center;">My Achievement & Education</h2>
-  <p style="text-align:center;">Master, Diploma and Courses.</p>
-  <div class="card-body sml">
-    <li><strong>UDEMY</strong>, July 2021 - Flutter Development.</li>
-    <li><strong>UDEMY</strong>, Januar 2021 - HTML & CSS.</li>
-    <li><strong>24ORE BUSINESS SCHOOL</strong>, July 2019 - Master in Project Management.</li>
-    <li><strong>SDA Bocconi</strong>, December 2017 – Master Samsung Top Dealer Digital.</li>
-    <li><strong>UNIVERSITA' “Federico II”</strong>, Napoli – Studies in Law.</li>   
-    <li><strong>IST. SCIENTIFICO IND. INFORMATICO “A.Manzoni”</strong>, June 2004 - Diploma Scientifico</li> 
+<section id="about" class="section">
+  <div class="sec-header">
+    <div class="sec-index">01</div>
+    <h2 class="sec-title">CHI SONO</h2>
+    <h2 class="sec-title outline">/ WHO I AM</h2>
   </div>
-</div>
-<div class="col-md-6 container mt-3 shadow p-4 mb-4" id="Competencies">
-  <h2 style="text-align:center;">Methodologies & Competences</h2>
-  <p style="text-align:center;">Tools and knowledge</p>
-  <div class="card-body sml">
-    <li><strong>Business Developer Tools</strong>: Odoo, Pipedrive, Mailshake, ActiveCampaign, Dripify, Apollo, ClicksUp.</li>
-    <li><strong>Project Management Methodologies</strong>: Waterfall, Agile and PMP.</li>
-    <li><strong>Project Management Tools</strong>: Miro, Atlassian Jira, Trello, Microsoft Project and comparable.</li>
-    <li><strong>Languages & Frameworks</strong>: HTML, CSS, Bootstrap, JS, React, Liquid, Flutter.</li>
-  </div>
-</div>
-</div>
-</div>
-
-<footer class="pt-4 pb-4 text-center bg-light" id="Contacts">
-  <div class="row">
-    <div class="col-md-4 mt-1 pt-3"><img src="USI Startup Center.png" style="height: 120px" alt="USI"></div>
-    <div class="col-md-4">          
-      <div class="my-3">
-      <div class="h3">Marco D'Oro</div>
-      <p>Download my resume here: <a href="https://bit.ly/494cttb" class="CV" id="Downloads">CV</a></p>
-      <div class="container-fluid mt-3">
-          <button class="btn btn-secondary mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#contact">
-            Contact me!
-          </button>
-        </div>
-
+  <div class="about-grid">
+    <div class="about-photo-wrap">
+      <img class="about-photo" src="Profile photo.png" alt="Marco D'Oro">
+      <div class="about-photo-label">— Marco D'Oro —</div>
     </div>
-    <div class="text-small text-secondary">
-      <div class="mb-1">&copy; M.D'O. All rights reserved.</div>
+    <div class="about-text">
+      <div class="about-big">Quick in getting<br>the ropes.<br><em>Hands-on.</em><br>Results-driven.</div>
+      <p class="about-body">My expertise encompasses research, business opportunity identification, and business model development, coupled with extensive experience in sales, marketing, project and product management, and vendor relations. Proficient in networking, negotiation, partnership establishment, and cost-saving implementations.</p>
+      <p class="about-body">My background as a Project Manager has sharpened my critical thinking and problem-solving abilities. With a keen eye for detail and impeccable organizational skills, I oversee projects with thoroughness and precision, leaving no aspect overlooked.</p>
+      <div class="about-tags">
+        <span class="tag">Emotional Intelligence</span>
+        <span class="tag">Coaching</span>
+        <span class="tag">Talent Spotting</span>
+        <span class="tag">Negotiation</span>
+        <span class="tag">Critical Thinking</span>
+        <span class="tag">Resilience</span>
+        <span class="tag">Networking</span>
+      </div>
+    </div>
   </div>
+</section>
+
+<section id="experience" class="section">
+  <div class="sec-header">
+    <div class="sec-index">02</div>
+    <h2 class="sec-title">EXPERIENCE</h2>
   </div>
-    <div class="col-md-4 mt-1 pt-4"><img src="Boldbrain.png" style="width: 300px" alt="BoldBrain"></div>
-  </div>  
+
+  <div class="exp-row">
+    <div class="exp-period"><strong>Apr 2022 — Present</strong>Current role</div>
+    <div>
+      <div class="exp-role">Sales Director</div>
+      <div class="exp-company">Dataware Intelligence SA</div>
+      <ul class="exp-bullets">
+        <li>Increased sales pipeline by 45% through effective lead generation</li>
+        <li>Strategic alliances resulting in 20% increase in partnership agreements</li>
+        <li>Achieved 30% sales revenue increase via targeted strategies</li>
+        <li>Led market expansion into new regions, enhancing brand awareness</li>
+      </ul>
+    </div>
+    <div class="exp-badge">AML · Compliance</div>
+  </div>
+
+  <div class="exp-row">
+    <div class="exp-period"><strong>Jan 2021 — Mar 2022</strong></div>
+    <div>
+      <div class="exp-role">Business Development Manager</div>
+      <div class="exp-company">Talent4GIG AG</div>
+      <ul class="exp-bullets">
+        <li>Refined the company's business model for improved market positioning</li>
+        <li>Implemented lead generation strategies and initiated client engagement</li>
+        <li>Negotiated contract terms and ensured seamless project execution</li>
+      </ul>
+    </div>
+    <div class="exp-badge">Recruiting · Tech</div>
+  </div>
+
+  <div class="exp-row">
+    <div class="exp-period"><strong>Mar 2020 — Present</strong></div>
+    <div>
+      <div class="exp-role">Web & Mobile Developer</div>
+      <div class="exp-company">Freelance</div>
+      <ul class="exp-bullets">
+        <li>HTML, CSS, Bootstrap, React, Flutter development</li>
+        <li>e-Commerce platform development and maintenance</li>
+      </ul>
+    </div>
+    <div class="exp-badge">Dev · Design</div>
+  </div>
+
+  <div class="exp-row">
+    <div class="exp-period"><strong>May 2018 — Dec 2020</strong></div>
+    <div>
+      <div class="exp-role">Digital Project Manager</div>
+      <div class="exp-company">Axians-Sirecom Srl</div>
+      <ul class="exp-bullets">
+        <li>Coordinated internal resources and vendors for flawless project execution</li>
+        <li>Delivered projects on-time, within scope and budget</li>
+        <li>Monitored performance with appropriate KPIs and tools</li>
+      </ul>
+    </div>
+    <div class="exp-badge">PM · Agile</div>
+  </div>
+
+  <div class="exp-row">
+    <div class="exp-period"><strong>Jan 2012 — Apr 2018</strong></div>
+    <div>
+      <div class="exp-role">Consultant & Key Account</div>
+      <div class="exp-company">Albaufficio Srl</div>
+      <ul class="exp-bullets">
+        <li>Identified customer needs and aligned solutions to objectives</li>
+        <li>Sales negotiation and contract closing</li>
+      </ul>
+    </div>
+    <div class="exp-badge">Sales · B2B</div>
+  </div>
+
+  <div class="exp-row">
+    <div class="exp-period"><strong>Dec 2009 — Dec 2011</strong></div>
+    <div>
+      <div class="exp-role">Computer Sales Specialist</div>
+      <div class="exp-company">Dimo S.P.A.</div>
+      <ul class="exp-bullets">
+        <li>Customer needs assessment and solution selling</li>
+        <li>Sales negotiation, closing, supplier coordination</li>
+      </ul>
+    </div>
+    <div class="exp-badge">Retail · Tech</div>
+  </div>
+
+</section>
+
+<section id="skills" class="section">
+  <div class="sec-header">
+    <div class="sec-index">03</div>
+    <h2 class="sec-title">SKILLS</h2>
+  </div>
+  <div class="skills-two" id="skillsContainer">
+    <div class="skills-col">
+      <div class="skills-col-title">// Professional Skills</div>
+      <div class="sk-item"><div class="sk-top"><span class="sk-name">Business Development</span><span class="sk-pct">97%</span></div><div class="sk-bar"><div class="sk-fill" style="width:97%"></div></div></div>
+      <div class="sk-item"><div class="sk-top"><span class="sk-name">Team Leadership & Development</span><span class="sk-pct">95%</span></div><div class="sk-bar"><div class="sk-fill" style="width:95%"></div></div></div>
+      <div class="sk-item"><div class="sk-top"><span class="sk-name">Project Management</span><span class="sk-pct">90%</span></div><div class="sk-bar"><div class="sk-fill" style="width:90%"></div></div></div>
+      <div class="sk-item"><div class="sk-top"><span class="sk-name">Sales Process Optimization</span><span class="sk-pct">90%</span></div><div class="sk-bar"><div class="sk-fill" style="width:90%"></div></div></div>
+    </div>
+    <div class="skills-col">
+      <div class="skills-col-title">// Soft Skills</div>
+      <div class="sk-item"><div class="sk-top"><span class="sk-name">Adaptability</span><span class="sk-pct">95%</span></div><div class="sk-bar"><div class="sk-fill" style="width:95%"></div></div></div>
+      <div class="sk-item"><div class="sk-top"><span class="sk-name">Communication Skills</span><span class="sk-pct">90%</span></div><div class="sk-bar"><div class="sk-fill" style="width:90%"></div></div></div>
+      <div class="sk-item"><div class="sk-top"><span class="sk-name">Leadership</span><span class="sk-pct">85%</span></div><div class="sk-bar"><div class="sk-fill" style="width:85%"></div></div></div>
+      <div class="sk-item"><div class="sk-top"><span class="sk-name">Operations Management</span><span class="sk-pct">85%</span></div><div class="sk-bar"><div class="sk-fill" style="width:85%"></div></div></div>
+    </div>
+  </div>
+  <div class="lang-strip">
+    <div class="lang-item"><div class="lang-name">ITA</div><div class="lang-level">Mother tongue</div></div>
+    <div class="lang-item"><div class="lang-name">ENG</div><div class="lang-level">Written & Spoken — Fluent</div></div>
+    <div class="lang-item"><div class="lang-name">DEU</div><div class="lang-level">A1 Certificate</div></div>
+  </div>
+</section>
+
+<section id="education" class="section">
+  <div class="sec-header">
+    <div class="sec-index">04</div>
+    <h2 class="sec-title">EDUCATION</h2>
+    <h2 class="sec-title outline">& TOOLS</h2>
+  </div>
+  <div class="two-col-section">
+    <div>
+      <div class="edu-item"><div class="edu-year">2021</div><div><div class="edu-inst">Udemy</div><div class="edu-deg">Flutter Development</div></div></div>
+      <div class="edu-item"><div class="edu-year">2021</div><div><div class="edu-inst">Udemy</div><div class="edu-deg">HTML & CSS</div></div></div>
+      <div class="edu-item"><div class="edu-year">2019</div><div><div class="edu-inst">24ORE Business School</div><div class="edu-deg">Master in Project Management</div></div></div>
+      <div class="edu-item"><div class="edu-year">2017</div><div><div class="edu-inst">SDA Bocconi</div><div class="edu-deg">Master Samsung Top Dealer Digital</div></div></div>
+      <div class="edu-item"><div class="edu-year">—</div><div><div class="edu-inst">Università Federico II, Napoli</div><div class="edu-deg">Studies in Law</div></div></div>
+      <div class="edu-item"><div class="edu-year">2004</div><div><div class="edu-inst">I.S.I. Informatico "A. Manzoni"</div><div class="edu-deg">Diploma Scientifico</div></div></div>
+    </div>
+    <div>
+      <div class="tools-block">
+        <div class="tools-block-title">// Business Dev Tools</div>
+        <div class="pills"><span class="pill">Odoo</span><span class="pill">Pipedrive</span><span class="pill">Mailshake</span><span class="pill">ActiveCampaign</span><span class="pill">Dripify</span><span class="pill">Apollo</span><span class="pill">ClickUp</span></div>
+      </div>
+      <div class="tools-block">
+        <div class="tools-block-title">// Project Management</div>
+        <div class="pills"><span class="pill">Waterfall</span><span class="pill">Agile</span><span class="pill">PMP</span><span class="pill">Jira</span><span class="pill">Trello</span><span class="pill">Miro</span><span class="pill">MS Project</span></div>
+      </div>
+      <div class="tools-block">
+        <div class="tools-block-title">// Development Stack</div>
+        <div class="pills"><span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">Bootstrap</span><span class="pill">JavaScript</span><span class="pill">React</span><span class="pill">Flutter</span><span class="pill">Liquid</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <div class="sec-header">
+    <div class="sec-index">05</div>
+    <h2 class="sec-title">PROJECTS</h2>
+  </div>
+  <div class="projects-grid">
+    <div class="proj-card">
+      <div class="proj-num">01 / Music</div>
+      <div class="proj-title">Music<br>Production</div>
+      <p class="proj-desc">Original music distributed worldwide via Routenote & Distrokid. Available on all major streaming platforms including Spotify, Apple Music, and more.</p>
+      <a href="https://open.spotify.com/artist/4EIz3VfKYw6YFufyzV0mE2" class="proj-link" target="_blank">Listen on Spotify</a>
+    </div>
+    <div class="proj-card">
+      <div class="proj-num">02 / Newsletter</div>
+      <div class="proj-title">AML<br>News</div>
+      <p class="proj-desc">The Anti-Money Laundering newsletter on LinkedIn — covering compliance, regulatory updates, and AML insights for industry professionals and enthusiasts.</p>
+      <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7056183658365227008" class="proj-link" target="_blank">Follow on LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<section id="interviews" class="section">
+  <div class="sec-header">
+    <div class="sec-index">06</div>
+    <h2 class="sec-title">MEDIA</h2>
+    <h2 class="sec-title outline">/ INTERVIEWS</h2>
+  </div>
+  <div class="interview-grid">
+    <div class="interview-card">
+      <div class="interview-head">
+        <span class="interview-label">Spotify Podcast — Tech Recruiting</span>
+        <div class="interview-dot"></div>
+      </div>
+      <p class="interview-desc">Insights on Tech Recruiting and Skill Assessment — identifying talent in the modern workforce.</p>
+      <iframe src="https://open.spotify.com/embed/episode/0g1o0WgcOsqS7AuqK1BD0S" height="152" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+    <div class="interview-card">
+      <div class="interview-head">
+        <span class="interview-label">YouTube — AML Compliance</span>
+        <div class="interview-dot"></div>
+      </div>
+      <p class="interview-desc">Why Data Accuracy is crucial in AML Compliance — addressing misalignments among stakeholders.</p>
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/Pp0faMF-6_U?si=GrOZkgFm4PzK5JyF" title="AML Interview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<section id="reading" class="section">
+  <div class="sec-header">
+    <div class="sec-index">07</div>
+    <h2 class="sec-title">READING</h2>
+    <h2 class="sec-title outline">SUGGESTIONS</h2>
+  </div>
+  <div class="books-grid">
+    <div class="book-card">
+      <div class="book-tag">// AML · Compliance · 2023</div>
+      <div class="book-title">Le nuove regole antiriciclaggio 2023</div>
+      <p class="book-body">A comprehensive guide to the obligations professionals must meet under updated AML regulations. Addresses evolving organizational policies and ongoing staff training. Essential for banking, legal, insurance, and non-financial sectors.</p>
+    </div>
+    <div class="book-card">
+      <div class="book-tag">// Risk Management · Banking</div>
+      <div class="book-title">Deconstructing Money Laundering Risk</div>
+      <p class="book-body">A compelling exploration of the risk-based approach within banking. Uncovers how differing interpretations of risk impact money laundering management. A must-read for risk practitioners, financial institutions, and regulatory bodies.</p>
+    </div>
+  </div>
+</section>
+
+<footer id="contacts">
+  <div class="footer-big">MARCO<br>D'<span>ORO</span></div>
+  <div class="footer-bottom">
+    <div class="footer-sub">Sales Director · Lugano Area </div>
+    <a href="https://bit.ly/494cttb" class="footer-cv" target="_blank">Download CV ↗</a>
+  </div>
+  <div class="footer-copy">© M.D'O. All rights reserved. Built with passion.</div>
 </footer>
 
-    </div>
+<script>
+const toggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+toggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 
-    </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/e58c0a3a1b.js" crossorigin="anonymous"></script>
-<script>  
-  // Initialize tooltips
-  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl)
-  })
-  </script>
-  <script>
-  $(".panel-heading").hover(
-    function() {
-       $('.panel-collapse').collapse('show');
-     }, function() {
-       $('.panel-collapse').collapse('hide');
-     }
-   );
-   </script>
-
+const obs = new IntersectionObserver(entries => {
+  if (entries[0].isIntersecting) {
+    document.querySelectorAll('.sk-fill').forEach((el, i) => {
+      setTimeout(() => el.classList.add('visible'), i * 80);
+    });
+    obs.disconnect();
+  }
+}, { threshold: 0.2 });
+obs.observe(document.getElementById('skillsContainer'));
+</script>
+</body>
 </html>
 
 
